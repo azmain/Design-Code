@@ -1,17 +1,25 @@
+mixin nav-content()
+	ul
+		li: a(href="#about") About
+		li: a(href="#About") Youtube
+		li: a(href="#Mentoring") Mentoring
+		li: a(href="#Articles") Articles
+		li: a(href="#Vine") Vine
+		li: a(href="#Design") Design
+		li: a(href="#Notes") Notes
+		li: a(href="#Contact") Contact
+
+.mobile-nav
+	+nav-content()
+
+
 header
 	.header-position
 		h1.logo Azmain Islam
 
 		nav.site-nav
-			ul
-				li: a(href="#about") About
-				li: a(href="#About") Youtube
-				li: a(href="#Mentoring") Mentoring
-				li: a(href="#Articles") Articles
-				li: a(href="#Vine") Vine
-				li: a(href="#Design") Design
-				li: a(href="#Notes") Notes
-				li: a(href="#Contact") Contact
+			+nav-content()
+
 		a(href="mailto:azmainnishan@gmail.com").email-link +email me
 
 
